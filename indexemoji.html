@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji Toggler</title>
+
+    <style>
+    body{
+        background-color: #8593ff;
+        background-image: linear-gradient(45deg, #8593ff 0%, #ff8a7d 100%);
+        height: 100vh;
+        }
+    .title{
+            text-align: center;
+        }
+    .face-container{
+        background-color: white;
+        width: 400px;
+        margin: 10px auto;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 0 10px black;
+
+    }
+    .face-img{
+        height: 250px;
+    }
+    .btn-container{
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    .toggler{
+        font-size: 20px;
+        padding: 5px 20px;
+        border-radius: 20px;
+        border: 2px;
+        margin: 0 20px;
+        cursor: pointer;
+    }
+    .toggler:hover{
+        box-shadow: 0 0 10px black;
+    }
+    .btn-HAPPY{
+        border: 1px solid black;
+        font-size: 20px;
+        color: green;
+    }
+    .btn-SAD{
+        border: 1px solid black;
+        font-size: 20px;
+        color:  red;
+    }
+    @media screen and (max-width: 600px)
+    {
+        .face-container
+        {
+            width: 70%;
+        }
+        .face-img
+        {
+            height: 150px;
+        }
+    }
+
+    </style>
+
+</head>
+<body>
+    <h1 class="title">Emoji Toggler</h1>
+
+    <div class="face-container">
+    <img src="happyface.jpg" height="150px" class="face-img" id="face"/>
+
+    </div> 
+
+    <div class="btn-container">
+        <button class="toggler btn-HAPPY" onclick="HAPPY()">HAPPY</button>
+        <button class="toggler btn-SAD" onclick="SAD()">SAD</button>
+    </div>
+
+
+    <script>
+        function HAPPY()
+        {
+            const  face = document.getElementById("face");
+            face.src ="happyface.jpg";
+        }
+        function SAD()
+        {
+            const face = document.getElementById("face");
+            face.src = "sadface.jpeg";
+        }
+    </script>
+
+
+</body>
+</html>
